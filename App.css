@@ -1,0 +1,137 @@
+/* src/App.css */
+
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+button.show-todos-button {
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+button.show-todos-button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed .todo-title{
+  text-decoration: line-through;
+  color: #aaa; /* Adjust color for completed todos */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.todo-title {
+  flex: 1;
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.todo-actions button {
+  background-color: #007bff;
+  color: white;
+}
+
+.todo-actions button:hover {
+  background-color: #0056b3;
+}
+
+.todo-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.todo-actions button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 110px);
+    margin-right: 5px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-actions {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
